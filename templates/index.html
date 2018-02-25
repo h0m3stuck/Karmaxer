@@ -20,11 +20,6 @@ body {
     text-align: center;
     font-size: 5em;
 }
-.opacity {
-    width: 100%;
-    height: 100%;
-    background-color: #808080;
-}
 .subtitle {
     margin-top: 0px;
     padding-top: 0px;
@@ -36,8 +31,6 @@ body {
 #dropdown {
   background-color: white;
   color: blue;
-  margin-left:auto;
-  margin-right:auto;
 }
 #wrapper-dropdown {
   text-align: center;
@@ -45,10 +38,49 @@ body {
 #dropdown-list {
   text-align: center;
 }
+#input-box-top {
+  width: 25%;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+#input-box-bottom {
+  width: 25%;
+  margin-bottom: 5px;
+}
+#input-button {
+  width: 25%;
+  background-color: white;
+  color: blue;
+}
+#form-wrapper {
+  display: grid;
+  grid-template: repeat(4 1fr) / 1fr 300px 1fr;
+  margin-left: 25%;
+}
+#dropdown_text {
+  grid-row-start: 1;
+  grid-column: 2, span 1;
+
+}
+#name_text {
+  display: absolute;
+  grid-column: 2, span 1;
+  grid-row-start: 2;
+  clear: both;
+  text-align: center;
+}
+
+#email_text {
+  grid-column: 2, span 1;
+  grid-row-start: 3;
+}
+#button_text {
+  grid-column: 2, span 1;
+  grid-row-start: 4;
+}
 </style>
 </head>
 <body>
-  <div class="opacity">
   </div>
   <h1 class="title">KARMAXIT</h1>
   <p class="subtitle">Make the most out of social media through machine learning</p>
@@ -59,6 +91,16 @@ body {
         <li><a href="#">Funny</a></li>
         <li><a href="#">Coming Soon</a></li>
       </ul>
+</div>
+
+<div id="form-wrapper">
+        <form id="form-wrapper">
+        <label for="inputName" class="sr-only">Number of words</label>
+        <input id="input-box-top" type="name" name="inputName" id="inputName name_text" class="form-control" placeholder="Number of words" required autofocus>
+        <label for="inputEmail" class="sr-only">Time (UTC 24 HOURS)</label>
+        <input id="input-box-bottom" type="email" name="inputEmail" id="inputEmail email_text" class="form-control" placeholder="Time (UTC 24 HOURS)" required autofocus>
+        <button id="input-button" id="btnSignUp button_text" class="btn btn-lg btn-primary btn-block" type="button">Send Request</button>
+      </form>
 </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
